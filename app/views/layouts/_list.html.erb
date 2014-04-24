@@ -9,7 +9,7 @@
 		<% @shuffle.each do |n|%>
 		<tr>
 			<td><p><%= n %></p></td>
-			<td>
+			<td class="center">
 				<p>
 					<%= link_to({:action => 'move_up', :team_array => @shuffle, :team_index => @shuffle.index(n)}, :title => "Move Up") do %>
 					<span class="glyphicon glyphicon-arrow-up"></span>
