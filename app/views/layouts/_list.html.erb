@@ -1,0 +1,28 @@
+<table class="table-bordered table-striped">
+	<thead>
+		<tr>
+			<th><h4>Team Name</h4></th>
+			<th><h4>Options</h4></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @shuffle.each do |n|%>
+		<tr>
+			<td><p><%= n %></p></td>
+			<td>
+				<p>
+					<%= link_to({:action => 'move_up', :team_array => @shuffle, :team_index => @shuffle.index(n)}, :title => "Move Up") do %>
+					<span class="glyphicon glyphicon-arrow-up"></span>
+					<% end %>
+					<%= link_to({:action => 'move_down', :team_array => @shuffle, :team_index => @shuffle.index(n)}) do %>
+					<span class="glyphicon glyphicon-arrow-down"></span>
+					<% end %>
+					<%= link_to({:action => 'delete', :team_array => @shuffle, :team_index => @shuffle.index(n)}) do %>
+					<span class="glyphicon glyphicon-remove-circle"></span>
+					<% end %>
+				</p>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
