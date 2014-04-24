@@ -29,11 +29,11 @@ test:
   password:
   host: localhost
 
-production:
-  adapter: mysql
-  encoding: utf8
-  database: fp_randomize_production
-  pool: 5
-  username: root
-  password:
-  host: localhost
+#production:
+#  adapter: mysql
+#  encoding: utf8
+#  database: fp_randomize_production
+#  pool: 5
+#  username: root
+#  password:
+#  host: localhost
