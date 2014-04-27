@@ -27,6 +27,15 @@ class RandomizeController < ApplicationController
 	team_index = params[:team_index].to_i
 	new_position = team_index + 1
 
+	team_count = team_array.count
+
+	if team_count <= new_position
+		new_position = 0
+	else
+		new_position = team_index + 1
+	end
+
+
 	@shuffle = team_array.insert(new_position, team_array.delete_at(team_index))
 
 	end
